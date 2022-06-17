@@ -17,7 +17,7 @@ CORS(app)
 
 app.config['MONGODB_SETTINGS'] = {
     'db': 'SmartLab',
-    'host': 'localhost',
+    'host': 'mongodb+srv://SmartLabsDB:SmartLab@123@cluster0.lodkwlx.mongodb.net/SmartLab?retryWrites=true&w=majority',
     'port': 27017
 }
 
