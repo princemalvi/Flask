@@ -131,7 +131,12 @@ def signUp():
             "status":0,
             }
     return jsonify(msg)
- 
+   
+ @app.route('/home' , methods=['GET'])
+def home():
+    msg='Hello World'
+    return jsonify(msg)
+  
 @app.route('/signIn', methods=['POST'])
 def login():
     print("login")
