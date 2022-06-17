@@ -15,13 +15,14 @@ app = Flask(__name__)
 app.secret_key = 'SmartLab2022'
 CORS(app)
 
-app.config['MONGODB_SETTINGS'] = {
-    'db': 'SmartLab',
-    'host': 'mongodb+srv://SmartLabsDB:SmartLab@123@cluster0.lodkwlx.mongodb.net/SmartLab?retryWrites=true&w=majority',
-    'port': 27017
-}
+#app.config['MONGODB_SETTINGS'] = {
+#   'db': 'SmartLab',
+#  'host': 'mongodb+srv://SmartLabsDB:SmartLab@123@cluster0.lodkwlx.mongodb.net/?retryWrites=true&w=majority',
+#    'port': 27017
+#}
+DB_URI='mongodb+srv://SmartLabsDB:SmartLab@123@cluster0.lodkwlx.mongodb.net/?retryWrites=true&w=majority'
+app.config['MONGODB_HOST'] =DB_URI
 
- 
 db = MongoEngine()
 db.init_app(app)
 
